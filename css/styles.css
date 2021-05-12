@@ -1,2 +1,271 @@
+:root {
+    /* PRIMARY COLORS */
+    /*(intro and email sign up background)*/
+    --dark-intro-blue       : hsl(217, 28%, 15%);
+    /*(main background)*/
+    --dark-main-blue        : hsl(218, 28%, 13%);
+    /*  (footer background) */
+    --dark-footer-blue      : hsl(216, 53%, 9%);
+    /* (testimonials background) */
+    --dark-testimonials-blue: hsl(219, 30%, 18%);
+
+    /* ACCENT COLORS */
+    /*  (inside call-to-action gradient) */
+    --cyan-grad: hsl(176, 68%, 64%);
+    /*  (inside call-to-action gradient) */
+    --blue-grad: hsl(198, 60%, 50%);
+    /* (error) */
+    --light-red: hsl(0, 100%, 63%);
+}
 
 
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    background-color: var(--dark-main-blue)
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+}
+
+ul.horizontal-menu{
+    height: 100%;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+    font-weight: bold;
+}
+
+header nav {
+    padding-top: 3%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.horizontal-menu li {
+    height: 100%;
+    margin-right: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.horizontal-menu a {
+    height: 100%;
+    display: inherit;
+    align-items: inherit;
+    justify-items: inherit;
+    flex-direction: inherit;
+}
+
+header {
+    text-align: center;
+    background-color: var(--dark-intro-blue);
+    background-image: url(../images/bg-curvy-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+}
+
+.mid-container {
+    max-width: 681px;
+    margin: auto;
+    text-align: center;
+}
+
+section#intro {
+    margin: auto;
+    padding: 7.5%;
+}
+
+#intro-image {
+    height: 600px;
+}
+
+h1 {
+    font-size: 2.9rem;
+}
+
+h2{
+    font-size: 1.6rem;
+}
+
+.button {
+    height: 50px;
+    padding: auto;
+    width: 200px;
+    display: inline-flex;
+    background-color: var(--blue-grad);
+    align-items: center;
+    justify-content: center;
+}
+
+.rounded {
+    border-radius: 100px;
+}
+
+.button.rounded:hover {
+    background-color: var(--cyan-grad);
+
+}
+
+section#summary{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 30px;
+}
+
+#summary img{
+    height: 80px;
+}
+
+#stay-productive {
+    display: flex;
+    direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mid-content {
+    width: 45%;
+}
+
+section {
+    margin-top: 5%;
+}
+
+.row-flex {
+    display: flex;
+    direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card{
+    background-color: var(--dark-testimonials-blue);
+    margin-left: 2%;
+    border-radius: 10px;
+    padding: 1%;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.user-info div{
+    margin-left: 10px;
+}
+
+.user-info p{
+    margin: 0;
+}
+
+.user-image {
+height: 60px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+input{
+ border: none;
+ height: 50px;
+}
+
+input[type=email] {
+    width: 60%;
+    max-width: 300px;
+    padding: 0 2%;
+}
+
+
+.user-job {
+
+}
+
+#sign-up {
+    background-color: var(--dark-intro-blue);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 3px black;
+    position: relative;
+    margin-top: -100px;
+}
+
+footer{
+    width: 100%;
+    position: absolute;
+    background-color: var(--dark-footer-blue);
+    margin-top: 10%;
+    padding-bottom: 3%;
+}
+
+footer ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.row-flex-start {
+    display: flex;
+    direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.text-icon-side {
+    display: inline-flex;
+    align-items: flex-start;
+    max-width: 300px;
+}
+
+.text-icon-side p{
+    margin: 0;
+}
+
+.text-icon-side img{
+    height: fit-content;
+}
+
+.social-icon {
+    display: inline;
+    fill: white;
+    margin: 5px;
+    /*border: 2px solid white;*/
+    height: 30px;
+    width: 30px;
+}
+
+.social-icon svg {
+    height: 30px;
+    width: 30px;
+}

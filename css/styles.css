@@ -24,16 +24,36 @@ body, html {
     padding: 0;
     width: 100%;
     height: 100%;
-    color: white;
+    color: #D7DBE6;
+    font-weight: normal;
     font-family: 'Open Sans';
     font-size: 14px;
     background-color: var(--dark-main-blue)
 }
 
+.main-container{
+    overflow: hidden;
+}
+
+h1{
+    color: white;
+}
+
+h2{
+    font-weight: normal;
+}
+
+p{
+    color: #D7DBE6;
+}
 .container{
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    padding: 0 5%;
     max-width: 1440px;
+}
+
+.left-margin {
+    margin-left: 3%;
 }
 
 ul.horizontal-menu{
@@ -106,7 +126,8 @@ section#intro {
 }
 
 #intro-image {
-    height: 600px;
+    width: 100%;
+    max-height: 600px;
 }
 
 h1 {
@@ -119,6 +140,7 @@ h2{
 
 .button {
     height: 50px;
+    color: white;
     padding: auto;
     width: 200px;
     display: inline-flex;
@@ -136,10 +158,17 @@ h2{
 
 }
 
+
 section#summary{
+    margin: 0 18% 10%;
+    max-width: 900px;
+    text-align: center;
+    height: auto;
     display: grid;
     grid-template-columns: auto auto;
-    grid-gap: 30px;
+    grid-gap: 50px 110px;
+    
+
 }
 
 #summary img{
@@ -157,8 +186,20 @@ section#summary{
     width: 45%;
 }
 
+a.accent {
+    text-decoration: underline;
+    font-weight: 700;
+    color: var(--blue-grad);
+    font-size: 1.2rem;
+    text-underline-offset: 16%;
+}
+
+a.accent:hover {
+    color: white;
+}
+
 section {
-    margin-top: 5%;
+    margin-bottom: 10%;
 }
 
 .row-flex {
@@ -168,11 +209,21 @@ section {
     align-items: center;
 }
 
+
+
 .card{
     background-color: var(--dark-testimonials-blue);
-    margin-left: 2%;
+    margin-left: 5%;
     border-radius: 10px;
-    padding: 1%;
+    padding: 2.5%;
+    position: relative;
+}
+
+.quotes{
+    position: absolute;
+    top: -30px;
+    left: -10px;
+    z-index: -1;
 }
 
 .user-info {
@@ -199,12 +250,21 @@ height: 60px;
 input{
  border: none;
  height: 50px;
+ font-size: 14px;
+color: white;
+font-weight: bold;
 }
 
 input[type=email] {
     width: 60%;
+    color:hsl(219, 30%, 18%);
+    font-weight: normal;
     max-width: 300px;
     padding: 0 2%;
+}
+
+input:focus{
+    outline: none;
 }
 
 
@@ -215,10 +275,11 @@ input[type=email] {
 #sign-up {
     background-color: var(--dark-intro-blue);
     border-radius: 10px;
-    padding: 10px;
-    box-shadow: 2px 2px 3px black;
+    padding: 3%;
+    box-shadow: 2px 2px 5px #010101;
     position: relative;
     margin-top: -100px;
+    
 }
 
 footer{
@@ -233,6 +294,11 @@ footer ul{
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+footer .logo{
+    margin: 2% 0;
+    height: 30px;
 }
 
 .row-flex-start {
@@ -253,19 +319,25 @@ footer ul{
 }
 
 .text-icon-side img{
-    height: fit-content;
+    margin: 4px;
 }
 
 .social-icon {
-    display: inline;
+    display: flex;
     fill: white;
     margin: 5px;
-    /*border: 2px solid white;*/
-    height: 30px;
-    width: 30px;
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+a.social-icon:hover {
+    fill: var(--blue-grad)
 }
 
 .social-icon svg {
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
 }
